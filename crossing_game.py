@@ -16,7 +16,8 @@ screen.onkey(fun=player.up, key="w")
 screen.onkey(fun=player.go_right, key="d")
 screen.onkey(fun=player.go_left, key="a")
 
-
+ 
+ 
 game_is_on = True
 while game_is_on:
     screen.update()
