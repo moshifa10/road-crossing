@@ -1,5 +1,7 @@
 import turtle as t
 from player import Player
+from cars import Cars
+import time
 # I will be making the road crossing turtle game
 
 
@@ -7,6 +9,7 @@ from player import Player
 screen = t.Screen()
 screen.title("Road-Crossing Turtle")
 screen.setup(width=600 , height=600)
+screen.colormode(255)
 screen.tracer(0)
 
 screen.listen()
@@ -16,11 +19,11 @@ screen.onkey(fun=player.up, key="w")
 screen.onkey(fun=player.go_right, key="d")
 screen.onkey(fun=player.go_left, key="a")
 
- 
- 
+cars = Cars()
 game_is_on = True
 while game_is_on:
     screen.update()
+    time.sleep(0.1)
     # Detect player if is colliding with a wall and make the player not to move more than the wall
     if player.x_cor < -280 :
         player.x_cor += 20
@@ -28,5 +31,8 @@ while game_is_on:
         player.x_cor -= 20
     
     player.move()
+    
+    
+    cars.move()
 
 screen.exitonclick()

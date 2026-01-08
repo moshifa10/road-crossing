@@ -1,5 +1,4 @@
 from turtle import Turtle
-
 # Here I will be creating an object of a turtle
 
 class Player(Turtle):
