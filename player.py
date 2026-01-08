@@ -19,9 +19,6 @@ class Player(Turtle):
     def up(self):
         self.y_cor += 20
 
-    def down(self):
-        self.y_cor -= 20
-
     def go_left(self):
         self.x_cor -= 20
     
