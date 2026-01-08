@@ -14,7 +14,10 @@ class Player(Turtle):
 
 
     def move(self):
+        # if not (self.x_cor > 290 or self.x_cor < -290):
         self.goto(x=self.x_cor, y=self.y_cor)
+        # else:
+            # self.x_cor -= 20
     # How it moves
     def up(self):
         self.y_cor += 20
