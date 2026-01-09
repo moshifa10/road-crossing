@@ -21,10 +21,13 @@ player = Player()
 screen.onkey(fun=player.up, key="w")
 screen.onkey(fun=player.go_right, key="d")
 screen.onkey(fun=player.go_left, key="a")
-cars = Cars(300)
+
+def create_cars():
+    cars = Cars(300)
+    return cars
+cars = create_cars()
 
 level = Level()
-
 game_is_on = True
 while game_is_on:
     screen.update()
@@ -50,8 +53,12 @@ while game_is_on:
         
         # check if the player is at the finish line
     if player.ycor() > 280:
+        cars.all_cars = []
+        player.reset_player()
+        cars.reset_cars()
         level.increment_level()
         print(level.player_level)
+
         # game_is_on = False
 
 screen.exitonclick()

@@ -33,4 +33,6 @@ class Cars():
             car.shapesize(stretch_len=2, stretch_wid=1)
             car.color(self.create_color())
             self.all_cars.append(car)
-        
+
+    def reset_cars(self):
+        self.creat_player(300)
