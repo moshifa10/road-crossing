@@ -48,7 +48,7 @@ while game_is_on:
         
         # Check if player collided with the car
         if each_car.distance(player) < 25:
-            print(each_car.distance(player))
+            # print(each_car.distance(player))
             level.game_over()
             print("Game over")
             game_is_on = False
