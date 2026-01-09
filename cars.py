@@ -24,6 +24,7 @@ class Cars():
     def creat_player(self, level):
         for _ in range(level):
             car = Turtle(shape="square")
+            car.clear()
             car.speed(0)
             car.penup()
             car.setheading(180)
@@ -35,4 +36,8 @@ class Cars():
             self.all_cars.append(car)
 
     def reset_cars(self):
+        for car in self.all_cars:
+            car.hideturtle()
+            car.clear()
+        self.all_cars = []
         self.creat_player(300)

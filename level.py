@@ -24,3 +24,12 @@ class Level(Turtle):
             move=False,
             font= ("Arial", 20, "italic")
         )
+
+    def game_over(self):
+        self.goto(0,0)
+        self.write(
+            arg=f"Game Over.",
+            align= "center",
+            move=False,
+            font= ("Arial", 20, "italic")
+        )

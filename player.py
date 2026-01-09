@@ -12,6 +12,7 @@ class Player(Turtle):
         self.move()
 
     def reset_player(self):
+        self.clear()
         self.x_cor = 0
         self.y_cor = -280
         self.goto(x=self.x_cor,y=self.y_cor)

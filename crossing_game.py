@@ -48,16 +48,17 @@ while game_is_on:
         
         # Check if player collided with the car
         if each_car.distance(player) < 25:
+            print(each_car.distance(player))
+            level.game_over()
+            print("Game over")
             game_is_on = False
-            finished = False
         
         # check if the player is at the finish line
     if player.ycor() > 280:
-        cars.all_cars = []
+        cars.increment()
         player.reset_player()
         cars.reset_cars()
         level.increment_level()
-        print(level.player_level)
 
         # game_is_on = False
 
