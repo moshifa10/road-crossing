@@ -19,8 +19,8 @@ screen.listen()
 # Set up the screen
 player = Player()
 screen.onkey(fun=player.up, key="w")
-screen.onkey(fun=player.go_right, key="d")
-screen.onkey(fun=player.go_left, key="a")
+# screen.onkey(fun=player.go_right, key="d")
+# screen.onkey(fun=player.go_left, key="a")
 
 def create_cars():
     cars = Cars(300)

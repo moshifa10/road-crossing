@@ -30,3 +30,4 @@ class Player(Turtle):
     
     def go_right(self):
         self.x_cor += 20
+
